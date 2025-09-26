@@ -1,0 +1,110 @@
+
+
+public class MyClass {
+    public static void main(String args[]) {
+        int[] arr = {1, 2, 3, 2, 4, 3, 5}; // Example array
+        int[] result = findDuplicates(arr);
+        
+        // Print results
+        for (int i = 0; i < result.length; i++) {
+            if (result[i] != 0) {
+                System.out.println(result[i]);
+            }
+        }
+    }
+    
+    public static int[] findDuplicates(int[] arr) {
+        int[] result = new int[arr.length]; // ✅ Correct array syntax
+        int duplicateCount = 0;
+        
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i + 1; j < arr.length; j++) { // ✅ Start j from i+1
+                if (arr[i] == arr[j]) {
+                    // Check if already added to avoid duplicates in result
+                    boolean alreadyAdded = false;
+                    for (int k = 0; k < duplicateCount; k++) {
+                        if (result[k] == arr[i]) {
+                            alreadyAdded = true;
+                            break;
+                        }
+                    }
+                    
+                    if (!alreadyAdded) {
+                        result[duplicateCount] = arr[i]; // ✅ Use = not ==
+                        duplicateCount++;
+                    }
+                    break; // Found duplicate, move to next i
+                }
+            }
+        }
+        
+        return result; // ✅ Return array, not count
+    }
+}   
+
+
+//Few mistakes made while writing the original code
+////Few mistakes made while writing the original code
+/*
+//Creating a different function but not declaring it on the main file
+//Not using a boolean check if duplicates exsist or not. It is crucical to check for the boolean values so the function doesn't keep running
+//Muplile sytax eerors and not writing the code properly.
+Welcome to JDoodle!
+
+You can execute code here in 88 languages. Right now you’re in the Java IDE.
+
+  1. Click the orange Execute button ▶ to execute the sample code below and see how it works.
+
+  2. Want help writing or debugging code? Type a query into JDroid on the right hand side ---------------->
+
+  3.Try the menu buttons on the left. Save your file, share code with friends and open saved projects.
+
+Want to change languages? Try the search bar up the top.
+*/
+
+public class MyClass {
+  public static void main(String args[]) {
+      
+    
+}
+
+
+ public static int[] duplicates(int arr)
+ {
+     
+     int[] result = new int[arr.length]
+     
+     boolean alreadyAdded = false;
+     //Chekc if duplicates are there or not.
+     for(int k=0; k<duplicatesCount; k++)
+     {
+         
+     }
+     break;; Statement to break if duplicates are found.
+ }
+
+
+}
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    }
+  }
+}
