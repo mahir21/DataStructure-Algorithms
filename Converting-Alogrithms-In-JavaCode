@@ -1,4 +1,9 @@
-
+// move all zeros to the end while keeping other numbers in order:
+//1. Create result array same size as input
+//2. Keep track of position to place non-zero numbers
+//3. Go through input array
+//4. If number is not zero, place it at current position and move position forward
+//5. After placing all non-zeros, fill remaining positions with zeros
 
 public class MyClass {
     public static void main(String args[]) {
